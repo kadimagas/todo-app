@@ -1,0 +1,3 @@
+"vendor/" | Out-File .gitignore
+".env" | Out-File .gitignore -Append
+".DS_Store" |Out-File .gitignore -Append
