@@ -1,9 +1,8 @@
-name: Vérification PHP 
-on: [push, pull_request]
+name: PHP Lint
+on: push 
 jobs:
-   check:
-       runs-on: ubuntu-latest
-       steps:
-       - uses: action/checkout@v3
-       - name: Vérifier la syntaxe PHP 
-        run: php -l index.php
+  lint:
+     runs-on: ubuntu-latest
+     steps:
+     - uses: actions/checkout@v4
+     - run: php -l index.php
